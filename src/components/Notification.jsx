@@ -29,7 +29,7 @@ function Notification() {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
-          onClick={() => handleClick('notification')}
+          customFunc={handleClick('notification')}
         />
       </div>
       <div className="mt-5 ">

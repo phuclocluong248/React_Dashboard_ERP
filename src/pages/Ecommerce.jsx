@@ -21,13 +21,6 @@ function Ecommerce() {
             </div>
           </div>
           <div className="mt-6">
-            <Button
-              color="white"
-              bgColor={currentColor}
-              text="Download"
-              borderRadius="10px"
-              size="md"
-            />
           </div>
         </div>
         <div className="flex m-2 flex-wrap justify-center gap-1 items-center">

@@ -23,7 +23,7 @@ function Chat() {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
-          onClick={() => handleClick('cart')}
+          customFunc={handleClick('chat')}
         />
       </div>
       <div className="mt-5 ">

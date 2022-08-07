@@ -20,7 +20,7 @@ function Cart() {
             bgHoverColor="light-gray"
             size="2xl"
             borderRadius="50%"
-            onClick={() => handleClick('cart')}
+            customFunc={handleClick('cart')}
           />
         </div>
         {cartData?.map((item, index) => (
