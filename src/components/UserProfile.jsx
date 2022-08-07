@@ -7,7 +7,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
 
 function UserProfile() {
-  const { currentColor } = useStateContext();
+  const { currentColor, handleClick } = useStateContext();
 
   return (
     <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
@@ -19,6 +19,7 @@ function UserProfile() {
           bgHoverColor="light-gray"
           size="2xl"
           borderRadius="50%"
+          onClick={() => handleClick('userProfile')}
         />
       </div>
       <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6">
