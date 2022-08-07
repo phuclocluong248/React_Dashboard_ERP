@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/React_Dashboard_ERP/static/css/main.b274a3bd.css",
-    "main.js": "/React_Dashboard_ERP/static/js/main.53194462.js",
+    "main.js": "/React_Dashboard_ERP/static/js/main.100158af.js",
+    "static/media/avatar.jpg": "/React_Dashboard_ERP/static/media/avatar.9682333f4a4c5992d6dc.jpg",
     "static/media/product4.jpg": "/React_Dashboard_ERP/static/media/product4.767417bea17688d6d8ce.jpg",
     "static/media/product2.jpg": "/React_Dashboard_ERP/static/media/product2.e93f12ec1b20980a1bd1.jpg",
     "static/media/product1.jpg": "/React_Dashboard_ERP/static/media/product1.b8efc7a24c281ed8911b.jpg",
@@ -15,10 +16,10 @@
     "static/media/product5.jpg": "/React_Dashboard_ERP/static/media/product5.f4c5d8f991b753ca0fcc.jpg",
     "index.html": "/React_Dashboard_ERP/index.html",
     "main.b274a3bd.css.map": "/React_Dashboard_ERP/static/css/main.b274a3bd.css.map",
-    "main.53194462.js.map": "/React_Dashboard_ERP/static/js/main.53194462.js.map"
+    "main.100158af.js.map": "/React_Dashboard_ERP/static/js/main.100158af.js.map"
   },
   "entrypoints": [
     "static/css/main.b274a3bd.css",
-    "static/js/main.53194462.js"
+    "static/js/main.100158af.js"
   ]
 }
