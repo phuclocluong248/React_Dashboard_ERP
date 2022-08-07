@@ -16,7 +16,7 @@ function filterValue(value) {
 }
 const returnValue = financialChartData.filter(filterValue);
 
-const Financial = () => {
+function Financial() {
   const { currentMode } = useStateContext();
 
   return (

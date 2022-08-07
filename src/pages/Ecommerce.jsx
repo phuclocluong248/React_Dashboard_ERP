@@ -8,7 +8,7 @@ import {
   ecomPieChartData,
 } from "../data/dummy";
 import { useStateContext } from "../contexts/ContextProvider";
-const Ecommerce = () => {
+function Ecommerce() {
   const {currentColor} = useStateContext()
   return (
     <div className="mt-12">

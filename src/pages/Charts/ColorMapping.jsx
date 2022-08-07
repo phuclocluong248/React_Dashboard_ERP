@@ -5,7 +5,7 @@ import { colorMappingData, ColorMappingPrimaryXAxis, ColorMappingPrimaryYAxis, r
 import { ChartsHeader } from '../../components';
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const ColorMapping = () => {
+function ColorMapping() {
   const { currentMode } = useStateContext();
 
   return (

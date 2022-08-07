@@ -5,7 +5,7 @@ import { barCustomSeries, barPrimaryXAxis, barPrimaryYAxis } from '../../data/du
 import { ChartsHeader } from '../../components';
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const Bar = () => {
+function Bar() {
   const { currentMode } = useStateContext();
 
   return (
