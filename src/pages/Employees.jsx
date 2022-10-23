@@ -6,7 +6,12 @@ import {
   Page,
   Search,
   Inject,
-  Toolbar
+  Toolbar,
+  Sort,
+  Filter,
+  VirtualScroll,
+  Selection,
+  Edit,
 } from "@syncfusion/ej2-react-grids";
 import { employeesData, employeesGrid } from "../data/dummy";
 import { Header } from "../components";
@@ -20,18 +25,33 @@ function Employees() {
         dataSource={employeesData}
         allowPaging
         allowSorting
-        toolbar={['Search']}
+        toolbar={["Add", "Edit", "Update", "Delete", "Cancel", "Print"]}
         width="auto"
+        allowFiltering
+        allowPdfExport
+        allowResizing
+        editSettings={{ allowDeleting: true, allowEditing: true }}
       >
         <ColumnsDirective>
           {employeesGrid.map((item, index) => (
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[Page, Search, Toolbar]} />
+        <Inject
+          services={[
+            Page,
+            Search,
+            Toolbar,
+            Selection,
+            Sort,
+            Filter,
+            VirtualScroll,
+            Edit,
+          ]}
+        />
       </GridComponent>
     </div>
   );
-};
+}
 
 export default Employees;

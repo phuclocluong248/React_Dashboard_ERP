@@ -14,9 +14,9 @@ import {
   areaCustomSeries,
   areaPrimaryYAxis,
   areaPrimaryXAxis,
-} from "../../data/dummy";
-import { useStateContext } from "../../contexts/ContextProvider";
-import { Header } from "../../components";
+} from "../data/dummy";
+import { useStateContext } from "../contexts/ContextProvider";
+import { Header } from "../components";
 
 function Area() {
   const { currentMode } = useStateContext();

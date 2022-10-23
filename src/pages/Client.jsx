@@ -11,19 +11,27 @@ import {
   Sort,
   Filter,
 } from "@syncfusion/ej2-react-grids";
-import { customersData, customersGrid } from "../data/dummy";
+import { customersData, customersGrid } from "../data/customers";
 import { Header } from "../components";
 
-function Customers() {
+function Clients() {
   return (
     <div className="m-2 md-m-10 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="Customers" />
+      <Header category="Page" title="Clients" />
       <GridComponent
         id="gridcomp"
         dataSource={customersData}
         allowPaging
         allowSorting
-        toolbar={["Delete"]}
+        toolbar={[
+          "Add",
+          "Edit",
+          "Update",
+          "Delete",
+          "Cancel",
+          "Print",
+          "ExcelExport",
+        ]}
         editSettings={{ allowDeleting: true, allowEditing: true }}
         width="auto"
       >
@@ -36,6 +44,6 @@ function Customers() {
       </GridComponent>
     </div>
   );
-};
+}
 
-export default Customers;
+export default Clients;

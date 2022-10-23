@@ -16,10 +16,11 @@ import {
 import { ordersData, contextMenuItems, ordersGrid } from "../data/dummy";
 import { Header } from "../components";
 
-function Orders() {
+function Materials() {
   return (
     <div className="m-2 md-m-10 p-2 md:p-10 bg-white rounded-3xl">
-      <Header category="Page" title="Orders" />
+      <Header category="Page" title="Materials
+    " />
       <GridComponent
         id="gridcomp"
         dataSource={ordersData()}
@@ -63,4 +64,4 @@ function Orders() {
   );
 };
 
-export default Orders;
+export default Materials;

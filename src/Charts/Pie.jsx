@@ -1,7 +1,7 @@
 import React from "react";
 
-import { pieChartData } from "../../data/dummy";
-import { ChartsHeader, Pie as PieChart } from "../../components";
+import { pieChartData } from "../data/dummy";
+import { ChartsHeader, Pie as PieChart } from "../components";
 
 function Pie() {
   return (

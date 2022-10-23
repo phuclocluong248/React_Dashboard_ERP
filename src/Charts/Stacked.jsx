@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ChartsHeader, Stacked as StackedChart } from '../../components';
+import { ChartsHeader, Stacked as StackedChart } from '../components';
 
 function Stacked() {
   return (

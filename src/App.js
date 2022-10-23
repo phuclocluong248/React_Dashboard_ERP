@@ -1,32 +1,59 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
+import { Navbar, Sidebar, ThemeSettings } from "./components";
 import {
   Ecommerce,
   Orders,
-  Calendar,
   Employees,
-  Stacked,
-  Pyramid,
-  Customers,
-  Kanban,
+  Clients,
+  Products,
+  Sells,
+  Purchases,
+  Stocks,
+  Shippings,
+  Profits,
+  Suppliers,
+  Materials,
+  Settings,
+} from "./pages";
+import {
+  Line,
   Area,
   Bar,
   Pie,
   Financial,
-  ColorPicker,
   ColorMapping,
-  Editor,
-  Line,
-} from "./pages";
+  Pyramid,
+  Stacked,
+} from "./Charts";
+import { Kanban, ColorPicker, Editor, Calendar } from "./apps";
 import { useStateContext } from "./contexts/ContextProvider";
 import "./App.css";
 function App() {
-  const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
+  const {
+    activeMenu,
+    themeSettings,
+    setThemeSettings,
+    currentColor,
+    currentMode,
+    setColor,
+    setMode,
+  } = useStateContext();
+  useEffect(() => {
+    const currentThemeColor = localStorage.getItem("ERPY-colorMode");
+    const currentThemeMode = localStorage.getItem("ERPY-themeMode");
+    if (currentThemeColor) {
+      setColor(currentThemeColor);
+    }
+    if (currentThemeMode) {
+      setMode(currentThemeMode);
+    }
+  }, []);
   return (
-    <div className={currentMode === 'Dark' ? 'dark' : ''}>
+    <div className={currentMode === "Dark" ? "dark" : ""}>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
@@ -66,10 +93,18 @@ function App() {
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
                 {/* Product */}
+                <Route path="/products" element={<Products />} />
+                <Route path="/sells" element={<Sells />} />
+                <Route path="/purchases" element={<Purchases />} />
+                <Route path="/stocks" element={<Stocks />} />
+                <Route path="/clients" element={<Clients />} />
+                <Route path="/shippings" element={<Shippings />} />
+                <Route path="/profits" element={<Profits />} />
+                <Route path="/suppliers" element={<Suppliers />} />
+                <Route path="/materials" element={<Materials />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
-
+                <Route path="/settings" element={<Settings />} />
                 {/* apps  */}
                 <Route path="/kanban" element={<Kanban />} />
                 <Route path="/editor" element={<Editor />} />
